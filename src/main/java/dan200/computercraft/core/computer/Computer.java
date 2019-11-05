@@ -11,6 +11,7 @@ import dan200.computercraft.api.lua.ILuaAPI;
 import dan200.computercraft.api.peripheral.IWorkMonitor;
 import dan200.computercraft.core.apis.IAPIEnvironment;
 import dan200.computercraft.core.filesystem.FileSystem;
+import dan200.computercraft.core.lua.ILuaMachine;
 import dan200.computercraft.core.terminal.Terminal;
 
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -58,6 +59,10 @@ public class Computer
 
         executor = new ComputerExecutor( this );
         serverExecutor = new MainThreadExecutor( this );
+    }
+    
+    public ILuaMachine getMachine() {
+    	return executor.getMachine();
     }
 
     IComputerEnvironment getComputerEnvironment()

@@ -67,6 +67,8 @@ final class ComputerExecutor
 
     private ILuaMachine machine;
 
+    public ILuaMachine getMachine() { return machine; }
+    
     /**
      * Whether the computer is currently on. This is set to false when a shutdown starts, or when turning on completes
      * (but just before the Lua machine is started).

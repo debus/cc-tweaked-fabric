@@ -320,6 +320,9 @@ public class CobaltLuaMachine implements ILuaMachine
         {
             return wrapLuaObject( (ILuaObject) object );
         }
+        else if(object instanceof LuaValue) {
+        	return (LuaValue)object;
+        }
         else
         {
             return Constants.NIL;
